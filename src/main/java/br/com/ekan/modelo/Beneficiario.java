@@ -14,11 +14,8 @@ public class Beneficiario {
     private LocalDate dataNascimento;
     private LocalDate dataInclusao;
     private LocalDate dataAtualizacao;
-
     @OneToMany(mappedBy = "beneficiario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Documento> documentos = new ArrayList<>();
-    private String email;
-    private String senha;
 
     public Long getId() {
         return id;
@@ -48,14 +45,6 @@ public class Beneficiario {
         return documentos;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -78,14 +67,6 @@ public class Beneficiario {
 
     public void setDocumentos(List<Documento> documentos) {
         this.documentos = documentos;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     @Override

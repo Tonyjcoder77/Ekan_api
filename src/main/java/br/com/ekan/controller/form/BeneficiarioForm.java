@@ -14,12 +14,6 @@ public class BeneficiarioForm {
     private String telefone;
     @NotNull
     private LocalDate dataNascimento;
-//    private LocalDate dataInclusao;
-//    private LocalDate dataAtualizacao;
-    @NotNull @NotEmpty
-    private String email;
-    @NotNull @NotEmpty
-    private String senha;
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -32,19 +26,6 @@ public class BeneficiarioForm {
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-//    public void setDataInclusao(LocalDate dataInclusao) {
-//        this.dataInclusao = dataInclusao;
-//    }
-//    public void setDataAtualizacao(LocalDate dataAtualizacao) {
-//        this.dataAtualizacao = dataAtualizacao;
-//    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
     public Beneficiario converter() {
         Beneficiario bn =  new Beneficiario();
         bn.setNome(this.nome);
@@ -52,8 +33,6 @@ public class BeneficiarioForm {
         bn.setDataNascimento(this.dataNascimento);
         bn.setDataInclusao(LocalDate.now());
         bn.setDataAtualizacao(LocalDate.now());
-        bn.setEmail(this.email);
-        bn.setSenha(this.senha);
         return bn;
     }
 
