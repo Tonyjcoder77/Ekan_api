@@ -24,6 +24,9 @@ Para entrar e gerar o token digite a emai:frontUser@email.com e a senha:123456
 
 A partir do login recupera-se o token e usa nas proximas requisições
 Copie o token gerado e use para executar as demais APIs.
+Importante: Quando for colocar o token no header para executar as API´s, colocar:
+Bearer token_gerado
+É necessario colocar "Bearer" no começo do token para especificar o tipo de token
 
 A aplicação está documentada no swagger:
 http://localhost:8080/swagger-ui.html#/
